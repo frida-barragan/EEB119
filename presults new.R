@@ -61,5 +61,5 @@ lines(output[,1],output[,6],col="yellow")
 lines(output[,1],output[,7],col="purple")
 lines(output[,1],output[,8],col="black")
 
-legend("right", c("susceptibles", "exposed", "overweight", "obese", "extremely obese"),
-       col = c("blue", "red", "green", "yellow", "purple", "black"), lty = 1, bty = "n")
+legend("left", c("total population","susceptibles", "exposed", "overweight", "obese", "extremely obese", "recovered"),
+       col = c("blue", "red", "green", "yellow", "purple", "black", "pink"), lty = 1, bty = "n")
