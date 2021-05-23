@@ -53,7 +53,7 @@ SIRODE <- function(t, vars, pars) {
     list(c(N,dSdt,dEdt,dI1dt,dI2dt,dI3dt,dRdt))
   }) }
 output <- lsoda(IC, times, SIRODE, pars) 
-plot(output[,1],output[,2],type="l", xlab = "time", ylab="population")
+plot(output[,1],output[,2],type="l", xlab = "time", ylab="population", col = "pink")
 lines(output[,1],output[,3],col="blue") #Infected
 lines(output[,1],output[,4],col="red")
 lines(output[,1],output[,5],col="green")
@@ -62,4 +62,4 @@ lines(output[,1],output[,7],col="purple")
 lines(output[,1],output[,8],col="black")
 
 legend("left", c("total population","susceptibles", "exposed", "overweight", "obese", "extremely obese", "recovered"),
-       col = c("blue", "red", "green", "yellow", "purple", "black", "pink"), lty = 1, bty = "n")
+       col = c("pink","blue", "red", "green", "yellow", "purple", "black"), lty = 1, bty = "n")
